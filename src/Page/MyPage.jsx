@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { PageHeadSpan, PageBody } from 'Styles/main.mobile';
-import { AccountInfo, MemberProfile } from 'components/MyPage';
+import { AccountInfo, MemberProfile, ActivityInfo, EtcInfo } from 'components/MyPage';
 
 const MyPageFrame = styled.div`
 	width: 100%;
@@ -16,6 +16,8 @@ const MyPage = () => {
 			<PageBody>
 				<AccountInfo />
 				<MemberProfile />
+				<ActivityInfo />
+				<EtcInfo />
 			</PageBody>
 		</MyPageFrame>
 	);

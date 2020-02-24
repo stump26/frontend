@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { types } from '@babel/core';
 
 export const PageHeadSpan = styled.span`
 	position: relative;
@@ -36,10 +37,14 @@ export const ContainerSubTitle = styled.span`
 	font-weight: 900;
 `;
 
-export const FormTextField = styled.input`
+export const FormTextField = styled.input.attrs(({ placeholder }) => ({
+	type: 'text',
+	placeholder: placeholder || '내용을 입력해주세요',
+}))`
+	width: ${(props) => props.width || '100%'};
 	height: 46px;
 	background-color: #f7f7f7;
-	margin: 0 20px;
+	margin: ${(props) => props.margin || '0 20px'};
 	margin-bottom: 20px;
 	padding-left: 1em;
 	font-size: 14px;
@@ -77,4 +82,45 @@ export const FormSingleOption = styled.option`
 	font-size: 14px;
 	border: solid 1px #e6e6e6;
 	color: #b3b3b3;
+`;
+
+export const FormTextArea = styled.textarea.attrs(({ placeholder }) => ({
+	placeholder: placeholder || '( , ) 로 구분하여 내용을 입력해주세요',
+}))`
+	margin: 0 20px;
+	margin-bottom: 20px;
+	min-height: 160px;
+	border-radius: 1px;
+	border: solid 1px #e6e6e6;
+	background-color: #f7f7f7;
+	font-size: 14px;
+	resize: none;
+	::placeholder {
+		color: #b3b3b3;
+	}
+`;
+
+export const FromGridFrame = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 20px;
+	margin-bottom: 20px;
+`;
+
+export const FormCheckItem = styled.div`
+	display: flex;
+	flex-basis: 50%;
+	align-items: center;
+	font-size: 14px;
+`;
+export const FormCheckbox = styled.input.attrs({
+	type: 'checkbox',
+})`
+	width: 22px;
+	height: 22px;
+	border-radius: 5px;
+	background-color: #00df9b;
+`;
+export const FormCheckboxLabel = styled.label`
+	color: #666666;
 `;

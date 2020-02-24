@@ -8,11 +8,18 @@ import {
 	FormTextField,
 } from 'Styles/main.mobile';
 import { PositionCardBackground, PositionCard, PositionAddBtn } from './PositionCard';
-import DropdownSelector from './DropdownSelector';
+import DropdownSelector from '../commons/DropdownSelector';
 
 const IdentySelector = styled.div`
 	margin: 0 20px;
 	margin-bottom: 20px;
+`;
+const PositionSubTitle = styled.span`
+	margin: 0 20px;
+	margin-bottom: 10px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #999999;
 `;
 
 const MemberProfile = () => {
@@ -26,9 +33,11 @@ const MemberProfile = () => {
 				<DropdownSelector field={['대학생', '직장인']} placeholder="항목을 선택하세요" />
 			</IdentySelector>
 			<ContainerSubTitle>포지션</ContainerSubTitle>
+			<PositionSubTitle>베이스 포지션</PositionSubTitle>
 			<PositionCardBackground>
 				<PositionCard enableTack />
 			</PositionCardBackground>
+			<PositionSubTitle>서브 포지션</PositionSubTitle>
 			<PositionCardBackground>
 				<PositionCard />
 				<PositionCard />
