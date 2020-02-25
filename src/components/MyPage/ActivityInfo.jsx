@@ -4,9 +4,17 @@ import moment from 'moment';
 import DateRangePicker from 'components/commons/DateRangePicker';
 import YesOrNoButton from 'components/commons/YesOrNoButton';
 import CheckBoxGroup from 'components/commons/CheckBoxGroup';
-import { ContainerFrame, ContainerTitle, ContainerSubTitle, FormTextArea } from 'Styles/main';
+import {
+	ContainerFrame,
+	ContainerTitle,
+	ContainerSubTitle,
+	FormTextArea,
+	ContainerBody,
+	FormField,
+} from 'Styles/main';
 
 const ActivityInformation = () => {
+	//redux로 뺴낼것
 	const fromDate = useState(moment().format('YYYY-MM-DD'));
 	const toDate = useState(moment().format('YYYY-MM-DD'));
 	const fromDatePickerRef = useRef();
@@ -27,16 +35,28 @@ const ActivityInformation = () => {
 	return (
 		<ContainerFrame>
 			<ContainerTitle>활동 정보</ContainerTitle>
-			<ContainerSubTitle>프로젝트 참여 가능 기간</ContainerSubTitle>
-			<DateRangePicker refs={[fromDatePickerRef, toDatePickerRef]} />
-			<ContainerSubTitle>사용사능한 Tool 및 기술</ContainerSubTitle>
-			<FormTextArea />
-			<ContainerSubTitle>협업툴</ContainerSubTitle>
-			<FormTextArea />
-			<ContainerSubTitle>팀빌딩 경험</ContainerSubTitle>
-			<YesOrNoButton />
-			<ContainerSubTitle>선호 멤버 유형</ContainerSubTitle>
-			<CheckBoxGroup checkProps={PreferMemberProps} />
+			<ContainerBody>
+				<FormField>
+					<ContainerSubTitle>프로젝트 참여 가능 기간</ContainerSubTitle>
+					<DateRangePicker refs={[fromDatePickerRef, toDatePickerRef]} />
+				</FormField>
+				<FormField>
+					<ContainerSubTitle>사용사능한 Tool 및 기술</ContainerSubTitle>
+					<FormTextArea />
+				</FormField>
+				<FormField>
+					<ContainerSubTitle>협업툴</ContainerSubTitle>
+					<FormTextArea />
+				</FormField>
+				<FormField>
+					<ContainerSubTitle>팀빌딩 경험</ContainerSubTitle>
+					<YesOrNoButton />
+				</FormField>
+				<FormField>
+					<ContainerSubTitle>선호 멤버 유형</ContainerSubTitle>
+					<CheckBoxGroup checkProps={PreferMemberProps} />
+				</FormField>
+			</ContainerBody>
 		</ContainerFrame>
 	);
 };

@@ -6,7 +6,6 @@ const FormDateRangePickerFrame = styled.div`
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	margin: 10px 20px;
 `;
 const DatePicker = styled.input`
 	height: 46px;

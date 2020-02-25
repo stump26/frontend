@@ -5,8 +5,6 @@ const ButtonFrame = styled.div`
 	display: flex;
 	flex-direction: row;
 	height: 46px;
-	margin: 0 20px;
-	margin-bottom: 20px;
 `;
 
 const ButtonItemActive = css`
