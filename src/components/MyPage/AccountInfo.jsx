@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-	ContainerFrame,
-	ContainerTitle,
-	ContainerSubTitle,
-	FormTextField,
-} from 'Styles/main.mobile';
+import { ContainerFrame, ContainerTitle, ContainerSubTitle, FormTextField } from 'Styles/main';
 
 const AccountInfo = () => {
 	return (

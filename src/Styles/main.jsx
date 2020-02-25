@@ -1,20 +1,49 @@
 import styled from 'styled-components';
-import { types } from '@babel/core';
 
+const viewPortSize = {
+	mobile: '425px',
+	tablet: '768px',
+	laptop: '1024px',
+	laptopL: '1440px',
+	desktop: '1980px',
+};
+export const device = {
+	mobile: `(max-width: ${viewPortSize.mobile})`,
+	tablet: `(max-width: ${viewPortSize.tablet})`,
+	laptop: `(min-width: ${viewPortSize.laptop})`,
+	laptopL: `(min-width: ${viewPortSize.laptopL})`,
+	desktop: `(min-width: ${viewPortSize.desktop})`,
+};
 export const PageHeadSpan = styled.span`
 	position: relative;
 	display: inline-block;
 	width: 100%;
-	font-size: 28px;
 	font-weight: 900;
-	padding-left: 0.5em;
-	padding-top: 0.5rem;
-	padding-bottom: 1rem;
 	border-bottom: 1px solid #e6e6e6;
+	@media ${device.tablet} {
+		font-size: 28px;
+		margin-top: 0.5rem;
+		padding-left: 0.5em;
+		padding-bottom: 1rem;
+	}
+	@media ${device.laptop} {
+		border-bottom: none;
+		font-size: 34px;
+		margin-top: 70px;
+		margin-bottom: 0;
+		padding-left: 0;
+		padding-bottom: 30px;
+		color: #333333;
+	}
 `;
 
 export const PageBody = styled.div`
 	background-color: #ffffff;
+	@media ${device.laptop} {
+		padding-top: 20px;
+		border-radius: 5px;
+		box-shadow: 3px 6px 10px 0 rgba(0, 0, 0, 0.07);
+	}
 `;
 
 export const ContainerFrame = styled.div`
@@ -22,6 +51,7 @@ export const ContainerFrame = styled.div`
 	flex-direction: column;
 	margin: 20px 0;
 	border-bottom: 1px dashed #e6e6e6;
+	background-color: #ffffff;
 `;
 
 export const ContainerTitle = styled.span`
@@ -41,7 +71,8 @@ export const FormTextField = styled.input.attrs(({ placeholder }) => ({
 	type: 'text',
 	placeholder: placeholder || '내용을 입력해주세요',
 }))`
-	width: ${(props) => props.width || '100%'};
+	position: relative;
+	width: ${(props) => props.width || 'inherit'};
 	height: 46px;
 	background-color: #f7f7f7;
 	margin: ${(props) => props.margin || '0 20px'};

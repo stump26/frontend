@@ -4,12 +4,7 @@ import moment from 'moment';
 import DateRangePicker from 'components/commons/DateRangePicker';
 import YesOrNoButton from 'components/commons/YesOrNoButton';
 import CheckBoxGroup from 'components/commons/CheckBoxGroup';
-import {
-	ContainerFrame,
-	ContainerTitle,
-	ContainerSubTitle,
-	FormTextArea,
-} from 'Styles/main.mobile';
+import { ContainerFrame, ContainerTitle, ContainerSubTitle, FormTextArea } from 'Styles/main';
 
 const ActivityInformation = () => {
 	const fromDate = useState(moment().format('YYYY-MM-DD'));

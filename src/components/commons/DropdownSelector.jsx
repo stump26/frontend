@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FormSingleSelect, FormSingleOption } from 'Styles/main.mobile';
+import { FormSingleSelect, FormSingleOption } from 'Styles/main';
 
 const DropdownSelector = ({ field, placeholder, width = null, height = null, margin = null }) => {
 	return (

@@ -5,7 +5,7 @@ import {
 	FormCheckbox,
 	FormCheckboxLabel,
 	FormTextField,
-} from 'Styles/main.mobile';
+} from 'Styles/main';
 const PreferMemberProp = ({ checkProps }) => {
 	return (
 		<FromGridFrame>

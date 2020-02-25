@@ -1,12 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import {
-	ContainerFrame,
-	ContainerTitle,
-	ContainerSubTitle,
-	FormTextField,
-} from 'Styles/main.mobile';
+import { ContainerFrame, ContainerTitle, ContainerSubTitle, FormTextField } from 'Styles/main';
 import { PositionCardBackground, PositionCard, PositionAddBtn } from './PositionCard';
 import DropdownSelector from '../commons/DropdownSelector';
 
