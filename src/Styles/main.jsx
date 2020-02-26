@@ -63,7 +63,7 @@ export const ContainerBody = styled.div`
 	width: calc(100% - 40px);
 	margin: 0 20px;
 	@media ${device.laptop} {
-		width: fit-content;
+		width: 100%;
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
@@ -87,6 +87,12 @@ export const FormField = styled.div`
 	@media ${device.laptop} {
 		width: 353px;
 		margin: 0 10px;
+
+		${({ size }) =>
+			size === 'half' && {
+				flexBasis: '47%',
+				margin: '0 10px',
+			}}
 	}
 `;
 
@@ -160,7 +166,9 @@ export const FormTextArea = styled.textarea.attrs(({ placeholder }) => ({
 	@media ${device.tablet} {
 		width: 100%;
 	}
-
+	@media ${device.laptop} {
+		width: 100%;
+	}
 	::placeholder {
 		color: #b3b3b3;
 	}

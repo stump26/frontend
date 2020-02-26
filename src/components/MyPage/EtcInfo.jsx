@@ -16,11 +16,11 @@ const EtcInfo = () => {
 		<ContainerFrame>
 			<ContainerTitle>기타 정보</ContainerTitle>
 			<ContainerBody>
-				<FormField>
+				<FormField size="half">
 					<ContainerSubTitle>사이드 프로젝트 경험</ContainerSubTitle>
 					<YesOrNoButton />
 				</FormField>
-				<FormField>
+				<FormField size="half">
 					<ContainerSubTitle>커뮤니티 진입 경로</ContainerSubTitle>
 					<CheckBoxGroup checkProps={communityEntryPathProps} />
 				</FormField>
