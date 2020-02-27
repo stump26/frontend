@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import mainUI from './UI.Style';
 
 const viewPortSize = {
 	mobile: '425px',
@@ -57,6 +58,7 @@ export const ContainerFrame = styled.div`
 		font-size: 24px;
 	}
 `;
+
 export const ContainerBody = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -103,31 +105,15 @@ export const ContainerSubTitle = styled.div`
 	font-weight: 900;
 `;
 
-export const FormTextField = styled.input.attrs(({ placeholder }) => ({
+export const FormTextField = styled(mainUI.FormTextField).attrs(({ placeholder }) => ({
 	type: 'text',
 	placeholder: placeholder || '내용을 입력해주세요',
 }))`
 	position: relative;
 	width: ${(props) => props.width || 'calc(100% - 20px)'};
 	height: 46px;
-	background-color: #f7f7f7;
 	padding-left: 1em;
 	font-size: 14px;
-	border-radius: 5px;
-	border: solid 1px #e6e6e6;
-	color: #000000;
-
-	::placeholder {
-		color: #b3b3b3;
-	}
-	:active {
-		background-color: #ffffff;
-	}
-	:focus {
-		border: solid 1px #00df9b;
-		background-color: #ffffff;
-		outline: none;
-	}
 
 	@media ${device.laptop} {
 		width: 337px;
