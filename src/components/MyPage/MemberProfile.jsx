@@ -11,7 +11,7 @@ import {
 	FormTextField,
 	FormField,
 	ContainerBody,
-} from 'Styles/main';
+} from 'Styles/MyPage.Style';
 import {
 	PositionCardListBox,
 	PositionCardBackground,

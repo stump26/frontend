@@ -5,7 +5,7 @@ import {
 	FormCheckbox,
 	FormCheckboxLabel,
 	FormTextField,
-} from 'Styles/main';
+} from 'Styles/MyPage.Style';
 const PreferMemberProp = ({ checkProps }) => {
 	return (
 		<FromGridFrame>

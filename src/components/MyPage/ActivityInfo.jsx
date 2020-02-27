@@ -9,7 +9,7 @@ import {
 	FormTextArea,
 	ContainerBody,
 	FormField,
-} from 'Styles/main';
+} from 'Styles/MyPage.Style';
 
 const ActivityInformation = () => {
 	const PreferMemberProps = [

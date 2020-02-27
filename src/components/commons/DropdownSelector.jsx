@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FormSingleSelect, FormSingleOption } from 'Styles/main';
+import { FormSingleSelect, FormSingleOption } from 'Styles/MyPage.Style';
 
 const DropdownSelector = ({ field, placeholder, width = null, height = null, margin = null }) => {
 	return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { device, PageHeadSpan, PageBody } from 'Styles/main';
+import { device, PageHeadSpan, PageBody } from 'Styles/MyPage.Style';
 import { AccountInfo, MemberProfile, ActivityInfo, EtcInfo } from 'components/MyPage';
 
 const MyPageFrame = styled.div`

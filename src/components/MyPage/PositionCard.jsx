@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbtack, faTimes, faPlus } from '@fortawesome/free-solid-svg-icons';
 
-import { device } from 'Styles/main';
+import { device } from 'Styles/MyPage.Style';
 import DropdownSelector from '../commons/DropdownSelector';
 
 export const PositionCardListBox = styled.div`

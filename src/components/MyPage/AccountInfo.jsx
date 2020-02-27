@@ -6,7 +6,7 @@ import {
 	ContainerSubTitle,
 	FormTextField,
 	FormField,
-} from 'Styles/main';
+} from 'Styles/MyPage.Style';
 
 const AccountInfo = () => {
 	return (
