@@ -1,10 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbtack, faTimes, faPlus } from '@fortawesome/free-solid-svg-icons';
+import {
+	faThumbtack,
+	faTimes,
+	faPlus,
+	faPlusCircle,
+	faMinusCircle,
+} from '@fortawesome/free-solid-svg-icons';
 
-import { device } from 'Styles/MyPage.Style';
-import DropdownSelector from '../commons/DropdownSelector';
+import { device } from 'Styles/UI.Style';
+import DropdownSelector from './DropdownSelector';
 
 export const PositionCardListBox = styled.div`
 	@media ${device.laptop} {
@@ -82,11 +88,7 @@ export const CardsListFrame = styled.div`
 
 const PositionCardFrame = styled.div`
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	height: 64px;
-	margin: 5px 0;
+	flex-direction: column;
 	border-radius: 3px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.07);
 	background-color: #ffffff;
@@ -149,5 +151,63 @@ export const PositionAddBtn = () => {
 		<PositionAddBtnFrame>
 			<FontAwesomeIcon icon={faPlus} color="#666666" width={16} />
 		</PositionAddBtnFrame>
+	);
+};
+
+export const CardBody = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 64px;
+	margin: 5px 0;
+`;
+
+export const CardFooter = styled.div`
+	display: flex;
+	flex-direction: row-reverse;
+	> #counter {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 10px;
+		margin-bottom: 5px;
+		> svg {
+			width: 25px;
+		}
+		> span.value {
+			font-size: 14px;
+			padding: 0 10px;
+		}
+	}
+`;
+
+export const PositionCountCard = () => {
+	const cnt = 0;
+
+	return (
+		<PositionCardFrame>
+			<CardBody>
+				<DropdownSelector
+					width="50%"
+					field={['기획', '디자인', '개발']}
+					placeholder="대분류"
+					margin="9px 6px"
+				/>
+				<DropdownSelector
+					width="50%"
+					field={['데이터 사이언티스트', '프론트엔드', '백엔드']}
+					placeholder="소분류"
+					margin="9px 6px"
+				/>
+			</CardBody>
+			<CardFooter>
+				<div id="counter">
+					<FontAwesomeIcon icon={faMinusCircle} color="#979797" size="2x" />
+					<span className="value">{cnt}</span>
+					<FontAwesomeIcon icon={faPlusCircle} color="#979797" size="2x" />
+				</div>
+			</CardFooter>
+		</PositionCardFrame>
 	);
 };

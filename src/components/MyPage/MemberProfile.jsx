@@ -20,7 +20,7 @@ import {
 	CardsListFrame,
 	PositionCard,
 	PositionAddBtn,
-} from './PositionCard';
+} from '../commons/PositionCard';
 import DropdownSelector from '../commons/DropdownSelector';
 import DateRangePicker from 'components/commons/DateRangePicker';
 

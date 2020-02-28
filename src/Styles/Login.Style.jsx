@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import mainUI from './UI.Style';
+import mainUI, { device } from './UI.Style';
 
 export const LoginFrame = styled.div`
 	display: flex;
@@ -11,6 +11,10 @@ export const LoginFrame = styled.div`
 	border-radius: 5px;
 	box-shadow: 40px 45px 57px 0 rgba(0, 0, 0, 0.07);
 	background-color: #ffffff;
+
+	@media ${device.tablet} {
+		height: 100vh;
+	}
 `;
 
 export const LoginImageBackGround = styled.img.attrs(() => ({
@@ -35,6 +39,10 @@ export const LoginFormContainer = styled.div`
 	justify-content: space-evenly;
 	align-items: center;
 	background-color: #ffffff;
+	@media ${device.tablet} {
+		min-width: 0;
+		width: 100%;
+	}
 `;
 
 export const LoginTitle = styled.div`
@@ -65,7 +73,8 @@ export const FormTextField = styled(mainUI.FormTextField).attrs(({ placeholder }
 	placeholder: placeholder || '',
 }))`
 	position: relative;
-	width: ${(props) => props.width || 'calc(340px - 1em)'};
+	width: 95%;
+	max-width: calc(340px - 1em);
 	height: 46px;
 	margin: 10px 0;
 	padding-left: 1em;
@@ -81,7 +90,8 @@ export const LoginBtnGroup = styled.div`
 `;
 
 export const LoginButton = styled.div`
-	width: 340px;
+	width: 95%;
+	max-width: 340px;
 	padding: 14px 0;
 	border-radius: 1px;
 	background-color: #3e3e3e;
@@ -98,7 +108,8 @@ export const LoginButton = styled.div`
 `;
 
 export const SignUpButton = styled.div`
-	width: 340px;
+	width: 95%;
+	max-width: 340px;
 	padding: 14px 0;
 	border-radius: 5px;
 	background-color: #b0b5bb;
@@ -108,6 +119,7 @@ export const SignUpButton = styled.div`
 	text-align: center;
 	text-decoration: none;
 	color: #ffffff;
+
 	&:hover {
 		cursor: pointer;
 		text-decoration: underline;

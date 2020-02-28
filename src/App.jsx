@@ -1,10 +1,10 @@
 import React from 'react';
-import { MyPage, Login } from './Page';
+import { MyPage, Login, AddOutReport } from './Page';
 
 function App() {
 	return (
 		<div className="App">
-			<Login />
+			<AddOutReport />
 		</div>
 	);
 }

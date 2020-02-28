@@ -1,20 +1,6 @@
 import styled from 'styled-components';
-import mainUI from './UI.Style';
+import mainUI, { device } from './UI.Style';
 
-const viewPortSize = {
-	mobile: '425px',
-	tablet: '768px',
-	laptop: '1024px',
-	laptopL: '1440px',
-	desktop: '1980px',
-};
-export const device = {
-	mobile: `(max-width: ${viewPortSize.mobile})`,
-	tablet: `(max-width: ${viewPortSize.laptop})`,
-	laptop: `(min-width: ${viewPortSize.laptop})`,
-	laptopL: `(min-width: ${viewPortSize.laptopL})`,
-	desktop: `(min-width: ${viewPortSize.desktop})`,
-};
 export const PageHeadSpan = styled.span`
 	position: relative;
 	display: inline-block;

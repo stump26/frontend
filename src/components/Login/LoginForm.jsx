@@ -15,7 +15,8 @@ const HrDivider = ({ text, width, margin }) => {
 	const Frame = styled.div`
 		display: flex;
 		flex-direction: row;
-		width: ${width};
+		width: 100%;
+		max-width: ${width};
 		margin: ${margin} 0;
 		margin-bottom: ${parseInt(margin) + 10}px;
 		justify-content: space-between;

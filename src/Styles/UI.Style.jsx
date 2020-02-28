@@ -1,5 +1,20 @@
 import styled from 'styled-components';
 
+const viewPortSize = {
+	mobile: '425px',
+	tablet: '768px',
+	laptop: '1024px',
+	laptopL: '1440px',
+	desktop: '1980px',
+};
+export const device = {
+	mobile: `(max-width: ${viewPortSize.mobile})`,
+	tablet: `(max-width: ${viewPortSize.laptop})`,
+	laptop: `(min-width: ${viewPortSize.laptop})`,
+	laptopL: `(min-width: ${viewPortSize.laptopL})`,
+	desktop: `(min-width: ${viewPortSize.desktop})`,
+};
+
 export const FormTextField = styled.input.attrs(() => ({
 	type: 'text',
 }))`
@@ -24,4 +39,5 @@ export const FormTextField = styled.input.attrs(() => ({
 
 export default {
 	FormTextField,
+	device,
 };
